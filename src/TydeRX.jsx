@@ -8,7 +8,16 @@ import React, { useState, useEffect, useRef } from "react";
 
 const CSS = `
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap');
-
+.caret {
+   display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
 .tx {
   --ink:      #0C1A1F;
   --deep:     #103B45;
@@ -609,8 +618,8 @@ function AnnouncementBar() {
   return (
     <div className="announce">
       <button className="announce-bar" onClick={() => setOpen(!open)} aria-expanded={open}>
-        <span>Up to $500 in HSA/FSA savings available this month</span>
-        <span className={`announce-chev ${open ? "up" : ""}`}>⌃</span>
+        <span>LICENSED U.S. CLINICIANS · FDA-APPROVED MEDICATION · HSA/FSA ELIGIBLE</span>
+        <span className={`announce-chev ${open ? "up" : ""}`}><span class="caret"></span></span>
       </button>
       <div className={`announce-panel ${open ? "open" : ""}`}>
         <div className="wrap announce-inner">
