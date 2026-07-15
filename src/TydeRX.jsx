@@ -663,7 +663,7 @@ export default function TydeRX() {
       {/* HERO */}
       <section className="hero bg-chart">
   <video className="hero-video" autoPlay muted loop playsInline poster="/video/hero-poster.jpg">
-    <source src="/video/untitled.mov" type="video/mp4" />
+    <source src="/video/Untitled.mov" type="video/mp4" />
   </video>
   <div className="hero-scrim" />
   <div className="wrap hero-grid">
