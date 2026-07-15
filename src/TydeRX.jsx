@@ -501,11 +501,6 @@ function Nav({ onStart }) {
     <header className="nav" onMouseLeave={() => setOpen(null)}>
       <div className="wrap nav-row">
         <a href="#" className="logo" aria-label="TydeRX home">
-          <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
-            <path d="M1 13 q4.5 -5 9 0 t9 0" fill="none" stroke="#1B7F8C" strokeWidth="2" strokeLinecap="round" />
-            <path d="M1 17 q4.5 -5 9 0 t9 0" fill="none" stroke="#0C1A1F" strokeWidth="2" strokeLinecap="round" opacity="0.35" />
-            <circle cx="10" cy="4" r="2.4" fill="#E8C255" />
-          </svg>
           Tyde<span className="rx">RX</span>
         </a>
 
