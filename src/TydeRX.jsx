@@ -54,8 +54,8 @@ const CSS = `
 .tx a { color: inherit; text-decoration: none; }
 .tx :focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; border-radius: 2px; }
 
-.tx h1, .tx h2, .tx h3 { font-family: var(--display); font-weight: 600; letter-spacing: -0.03em; line-height: 0.99; }
-.tx h1 { font-size: clamp(2.9rem, 6.2vw, 5.1rem); }
+.tx h1, .tx h2, .tx h3 { font-family: var(--display); font-weight: 500; letter-spacing: -0.03em; line-height: 0.99; }
+.tx h1 { font-size: clamp(2.9rem, 6.2vw, 3.1rem); }
 .tx h2 { font-size: clamp(2rem, 3.6vw, 3.05rem); }
 .tx h3 { font-size: 1.3rem; letter-spacing: -0.02em; line-height: 1.16; }
 .tx .eyebrow { font-family: var(--mono); font-size: 0.68rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.16em; color: var(--tide); }
