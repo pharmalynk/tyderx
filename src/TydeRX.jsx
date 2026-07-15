@@ -31,6 +31,7 @@ const CSS = `
   line-height: 1.62;
   -webkit-font-smoothing: antialiased;
 }
+  body { margin:0;}
 .tx *, .tx *::before, .tx *::after { box-sizing: border-box; }
 .tx p, .tx h1, .tx h2, .tx h3, .tx h4, .tx ul, .tx li, .tx figure { margin: 0; padding: 0; }
 .tx ul { list-style: none; }
