@@ -7,8 +7,12 @@ import React, { useState, useEffect, useRef } from "react";
  */
 
 const CSS = `
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face { font-family: 'General Sans'; src: url('/fonts/GeneralSans-Extralight.woff2') format('woff2'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'General Sans'; src: url('/fonts/GeneralSans-Light.woff2') format('woff2'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'General Sans'; src: url('/fonts/GeneralSans-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'General Sans'; src: url('/fonts/GeneralSans-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'General Sans'; src: url('/fonts/GeneralSans-Semibold.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'General Sans'; src: url('/fonts/GeneralSans-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&display=swap');
 .caret {
    display: inline-block;
     width: 0;
@@ -30,8 +34,9 @@ const CSS = `
   --slate:    #5A6B70;
   --line:     rgba(12,26,31,0.10);
 
-  --display: 'Instrument Sans', system-ui, sans-serif;
-  --body:    'Inter Tight', system-ui, sans-serif;
+  --display: 'General Sans', system-ui, sans-serif;
+--body:    'General Sans', system-ui, sans-serif;
+
   --mono:    'Geist Mono', ui-monospace, monospace;
 
   background: var(--chart);
