@@ -42,18 +42,6 @@ const CSS = `
   -webkit-font-smoothing: antialiased;
 }
   body { margin:0;}
-  .tx .hero { position: relative; overflow: hidden; }
-.tx .hero-video {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-.tx .hero-scrim {
-  position: absolute; inset: 0; z-index: 1;
-  background: linear-gradient(180deg, rgba(237,240,238,0.55) 0%, rgba(237,240,238,0.75) 100%);
-}
-.tx .hero .wrap { position: relative; z-index: 2; }
 .tx *, .tx *::before, .tx *::after { box-sizing: border-box; }
 .tx p, .tx h1, .tx h2, .tx h3, .tx h4, .tx ul, .tx li, .tx figure { margin: 0; padding: 0; }
 .tx ul { list-style: none; }
@@ -662,11 +650,7 @@ export default function TydeRX() {
 
       {/* HERO */}
       <section className="hero bg-chart">
-  <video className="hero-video" autoPlay muted loop playsInline poster="/video/hero-poster.jpg">
-    <source src="/video/Untitled.mov" type="video/mp4" />
-  </video>
-  <div className="hero-scrim" />
-  <div className="wrap hero-grid">
+        <div className="wrap hero-grid">
           <div>
             <span className="eyebrow">Medical weight care, made simple</span>
             <h1>Catch the wave to a healthier you.</h1>
