@@ -256,7 +256,10 @@ const CSS = `
   .tx .announce { position: relative; z-index: 60; }
 .tx .announce-bar {
   width: 100%; background: var(--signal); color: var(--ink);
-  font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.1em;
+  font-family: var(--mono);
+   font-size: 0.72rem; 
+   letter-spacing: 1.25px;
+   font-weight:500;
   text-transform: uppercase; padding: 11px 24px;
   display: flex; align-items: center; justify-content: center; gap: 12px;
 }
