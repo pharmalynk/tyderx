@@ -658,7 +658,7 @@ export default function TydeRX() {
         <div className="wrap hero-grid">
           <div>
             <span className="eyebrow">Medical weight care, made simple</span>
-            <h1>Hi tide<br />does the work.</h1>
+            <h1>Catch the wave to a healthier you.</h1>
             <p className="lede">
               GLP-1 medication works with your biology instead of against it. Tell us about your health, and
               a licensed clinician will tell you which treatment fits, what it costs, and what to expect.
