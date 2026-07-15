@@ -8,6 +8,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 const CSS = `
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&display=swap');
 .caret {
    display: inline-block;
     width: 0;
@@ -31,7 +32,7 @@ const CSS = `
 
   --display: 'Instrument Sans', system-ui, sans-serif;
   --body:    'Inter Tight', system-ui, sans-serif;
-  --mono:    'JetBrains Mono', ui-monospace, monospace;
+  --mono:    'Geist Mono', ui-monospace, monospace;
 
   background: var(--chart);
   color: var(--ink);
