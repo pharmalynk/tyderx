@@ -243,6 +243,36 @@ const CSS = `
   .tx .rise { transform: none; }
   .tx .pop, .tx .rv { opacity: 1; transform: none; }
 }
+  .tx .announce { position: relative; z-index: 60; }
+.tx .announce-bar {
+  width: 100%; background: var(--signal); color: var(--ink);
+  font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.1em;
+  text-transform: uppercase; padding: 11px 24px;
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+}
+.tx .announce-bar:hover { background: #EFCE6A; }
+.tx .announce-chev { transition: transform .5s cubic-bezier(.16,1,.3,1); font-size: 1rem; }
+.tx .announce-chev.up { transform: rotate(180deg); }
+.tx .announce-panel {
+  overflow: hidden; max-height: 0; background: var(--sand, #E8DDCD);
+  transition: max-height .55s cubic-bezier(.16,1,.3,1);
+}
+.tx .announce-panel.open { max-height: 340px; }
+.tx .announce-inner {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+  padding: 40px 28px 44px; align-items: center;
+}
+.tx .announce-lead h3 { font-size: 1.5rem; margin-bottom: 12px; }
+.tx .announce-lead p { color: var(--slate); font-size: 0.98rem; max-width: 42ch; }
+.tx .announce-list li {
+  padding: 14px 0; border-bottom: 1px solid var(--line);
+  display: flex; gap: 14px; align-items: baseline; font-size: 0.98rem;
+}
+.tx .announce-list .mono { color: var(--tide); font-size: 0.72rem; }
+@media (max-width: 900px) {
+  .tx .announce-inner { grid-template-columns: 1fr; gap: 28px; padding: 32px 24px; }
+  .tx .announce-panel.open { max-height: 560px; }
+}
 `;
 
 /* ---------------- signature chart ---------------- */
@@ -574,7 +604,30 @@ const FAQS = [
 ];
 
 /* ---------------- page ---------------- */
-
+function AnnouncementBar() {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="announce">
+      <button className="announce-bar" onClick={() => setOpen(!open)} aria-expanded={open}>
+        <span>Up to $500 in HSA/FSA savings available this month</span>
+        <span className={`announce-chev ${open ? "up" : ""}`}>⌃</span>
+      </button>
+      <div className={`announce-panel ${open ? "open" : ""}`}>
+        <div className="wrap announce-inner">
+          <div className="announce-lead">
+            <h3>Pay with pre-tax dollars.</h3>
+            <p>Most members cover treatment with HSA or FSA funds, which can lower the real cost by 20 to 30%. We prepare the documentation and provide a superbill if your plan reimburses.</p>
+          </div>
+          <ul className="announce-list">
+            <li><span className="mono">01</span> Eligible for most GLP-1 and metabolic treatments</li>
+            <li><span className="mono">02</span> No insurance required to start</li>
+            <li><span className="mono">03</span> Documentation handled for you</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+}
 export default function TydeRX() {
   const [quiz, setQuiz] = useState(false);
   const [faq, setFaq] = useState(null);
@@ -584,7 +637,7 @@ export default function TydeRX() {
     <div className="tx">
       <style>{CSS}</style>
 
-      <div className="utility">Licensed U.S. clinicians · FDA-approved medication · HSA/FSA eligible</div>
+<AnnouncementBar />
       <Nav onStart={start} />
 
       {/* HERO */}
