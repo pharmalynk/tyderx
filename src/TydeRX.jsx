@@ -26,7 +26,7 @@ const CSS = `
   --shallow:  #C3DCD9;
   --chart:    #EDF0EE;
   --paper:    #F6F8F6;
-  --signal:   #E8C255;
+  --signal:   #0a2e4a;
   --slate:    #5A6B70;
   --line:     rgba(12,26,31,0.10);
 
