@@ -255,7 +255,7 @@ const CSS = `
 }
   .tx .announce { position: relative; z-index: 60; }
 .tx .announce-bar {
-  width: 100%; background: var(--signal); color: var(--ink);
+  width: 100%; background: var(--signal); color: #e7f2f7;
   font-family: var(--mono);
    font-size: 0.72rem; 
    letter-spacing: 1.25px;
@@ -263,11 +263,11 @@ const CSS = `
   text-transform: uppercase; padding: 11px 24px;
   display: flex; align-items: center; justify-content: center; gap: 12px;
 }
-.tx .announce-bar:hover { background: #EFCE6A; }
+.tx .announce-bar:hover { background: #0a2e4a; }
 .tx .announce-chev { transition: transform .5s cubic-bezier(.16,1,.3,1); font-size: 1rem; }
 .tx .announce-chev.up { transform: rotate(180deg); }
 .tx .announce-panel {
-  overflow: hidden; max-height: 0; background: var(--sand, #E8DDCD);
+  overflow: hidden; max-height: 0; background: #e1dcd2;
   transition: max-height .55s cubic-bezier(.16,1,.3,1);
 }
 .tx .announce-panel.open { max-height: 340px; }
